@@ -1,0 +1,184 @@
+/* Estilos globais para o corpo da página */
+body {
+    font-family: 'Inter', sans-serif; /* Usando a fonte Inter importada */
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); /* Gradiente azul claro como fundo */
+    display: flex; /* Para centralizar o conteúdo da aplicação */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que a página ocupe a altura total da tela */
+    margin: 0; /* Remove margens padrão do body */
+    padding: 20px; /* Adiciona um pequeno padding para telas menores */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
+    color: #333; /* Cor padrão do texto */
+}
+
+/* Estilos para a caixa principal da aplicação */
+.caixa-principal {
+    background-color: #ffffff; /* Fundo branco para a caixa principal */
+    padding: 40px;
+    border-radius: 20px; /* Cantos bem arredondados */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada e suave */
+    text-align: center;
+    width: 90%; /* Largura responsiva */
+    max-width: 800px; /* Largura máxima para desktops */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para o título principal (h1) */
+h1 {
+    color: #2c3e50; /* Cor escura para o título */
+    margin-bottom: 35px;
+    font-size: 2.5em; /* Tamanho da fonte maior para o título */
+    font-weight: 700; /* Negrito */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Pequena sombra no texto do título */
+}
+
+/* Estilos para a caixa que contém a pergunta */
+.caixa-perguntas {
+    background-color: #f0f8ff; /* Azul muito claro para a caixa de perguntas */
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    min-height: 120px; /* Altura mínima para visualização */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #34495e; /* Cor do texto da pergunta */
+    font-size: 1.4em;
+    line-height: 1.7; /* Espaçamento entre linhas */
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.08); /* Sombra interna sutil */
+    text-align: center;
+    width: 100%; /* Ocupa a largura total da caixa principal */
+    max-width: 700px;
+}
+
+/* Estilos para a caixa que contém as alternativas */
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column; /* Alternativas empilhadas verticalmente */
+    gap: 15px; /* Espaço entre as alternativas */
+    margin-bottom: 30px;
+    width: 100%; /* Ocupa a largura total da caixa principal */
+    max-width: 700px;
+}
+
+/* Estilos para os botões de alternativa */
+.alternativa {
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px; /* Cantos arredondados */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2); /* Sombra sutil com cor do botão */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+.alternativa:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    transform: translateY(-3px); /* Leve levantamento */
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3); /* Sombra mais intensa no hover */
+}
+
+.alternativa:active {
+    background-color: #004085; /* Azul ainda mais escuro ao clicar */
+    transform: translateY(0); /* Retorna à posição original */
+    box-shadow: 0 3px 5px rgba(0, 123, 255, 0.2); /* Sombra menor ao clicar */
+}
+
+/* Estilos para a caixa que contém o resultado final */
+.caixa-resultado {
+    background-color: #d4edda; /* Um verde claro para a caixa de resultado */
+    padding: 35px;
+    border-radius: 15px;
+    display: none; /* Começa oculto e será exibido pelo JavaScript */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 100%; /* Ocupa a largura total da caixa principal */
+    max-width: 700px;
+}
+
+/* Estilos para o texto dentro da caixa de resultado */
+.texto-resultado {
+    color: #1a7139; /* Cor escura para o texto do resultado */
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+/* Media Queries para responsividade em telas menores */
+@media (max-width: 768px) {
+    .caixa-principal {
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    .caixa-perguntas {
+        font-size: 1.2em;
+        padding: 20px;
+        min-height: 100px;
+    }
+
+    .alternativa {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .caixa-resultado {
+        padding: 25px;
+    }
+
+    .texto-resultado {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .caixa-principal {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+
+    .caixa-perguntas {
+        font-size: 1em;
+        padding: 15px;
+        min-height: 80px;
+    }
+
+    .caixa-alternativas {
+        gap: 10px;
+    }
+
+    .alternativa {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+
+    .caixa-resultado {
+        padding: 20px;
+    }
+
+    .texto-resultado {
+        font-size: 1.2em;
+    }
+}

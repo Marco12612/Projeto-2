@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+
+}
+
+.container {
+    margin: 20% auto;
+    border: 1px solid black;
+    width: 700px;
+    border-radius: 7px;
+}
+
+.box {
+    text-align: justify;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.box > h1 {
+    text-align: center;
+    
+}
+
+#botao-1,  #botao-2 {
+    width: 200px;
+    height: 30px;
+    margin: 0 10%;
+}
