@@ -1,4 +1,4 @@
-Você Decide o Futuro da IA
+#Você Decide o Futuro da IA
 Este é um projeto interativo simples desenvolvido em HTML, CSS e JavaScript que explora diferentes caminhos para o desenvolvimento e impacto da Inteligência Artificial na sociedade. Através de perguntas e alternativas, o usuário é convidado a refletir sobre dilemas éticos e sociais relacionados à IA.
 
 🚀 Como Executar o Projeto
